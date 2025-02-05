@@ -14,7 +14,7 @@ const Locations = () => {
     const dispatch = useAppDispatch();
     const insets = useSafeAreaInsets();
 
-    const [nextPageUrl, setNextPageUrl] = useState(Endpoints.episode);
+    const [nextPageUrl, setNextPageUrl] = useState(Endpoints.location);
     const [locations, setLocations] = useState<Location[] | undefined>();
 
     useEffect(() => {
@@ -26,7 +26,7 @@ const Locations = () => {
 
     const getCharacters = async () => {
         const postBody: RequestPayload = {
-            stateKey: 'character',
+            stateKey: 'location',
             url: nextPageUrl,
             method: 'GET',
         };
@@ -66,7 +66,7 @@ const Locations = () => {
                 showsVerticalScrollIndicator={false}
                 style={styles.scrollList}
                 keyExtractor={item => item.id.toString()}
-                ListHeaderComponent={<ListHeader title="Episodes" />}
+                ListHeaderComponent={<ListHeader title="Locations" />}
                 renderItem={renderItem}
             />
         </View>

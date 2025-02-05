@@ -1,1 +1,1 @@
-export const stateKeys = ['character', 'episode'] as const;
+export const stateKeys = ['character', 'episode', 'location'] as const;
