@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Home from '@screens/Home';
+import { Episodes, Home, Locations } from '@screens/index';
 
 export type TabNavigationParam = {
     Characters: undefined;
@@ -15,8 +15,8 @@ const TabNavigation = () => {
         <Tab.Navigator
             screenOptions={({ }) => ({ headerShown: false })}>
             <Tab.Screen name="Characters" component={Home} />
-            <Tab.Screen name="Locations" component={Home} />
-            <Tab.Screen name="Episodes" component={Home} />
+            <Tab.Screen name="Episodes" component={Episodes} />
+            <Tab.Screen name="Locations" component={Locations} />
         </Tab.Navigator>
     );
 };

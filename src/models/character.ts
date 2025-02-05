@@ -19,12 +19,12 @@ export interface Character {
   created: string;
 }
 
-export interface Origin {
+interface Origin {
   name: string;
   url: string;
 }
 
-export interface Location {
+interface Location {
   name: string;
   url: string;
 }
